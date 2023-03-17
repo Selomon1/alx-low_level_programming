@@ -11,23 +11,29 @@
 int main(void)
 {
 	int i = 0;
-	int j;
+	int j, k;
 	int count = 0;
 
-	while (i <= 8)
+	while (i <= 7)
 	{
 		j = i + 1;
-		while (j <= 9)
+		while (j <= 8)
 		{
-			putchar(i + '0');
-			putchar(j + '0');
-			if (count != 44)
+			k = j + 1;
+			while (k <= 9)
 			{
-				putchar(',');
-				putchar(' ');
+				putchar(i + '0');
+				putchar(j + '0');
+				putchar(k + '0');
+				if (count != 119)
+				{
+					putchar(',');
+					putchar(' ');
+				}
+				k++;
+				count++;
 			}
 			j++;
-			count++;
 		}
 		i++;
 	}
