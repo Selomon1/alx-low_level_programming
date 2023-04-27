@@ -3,7 +3,7 @@
 
 /**
  * free_list - free a list
- * @head:head of the linked list
+ * @head: head of the linked list
  * Return: no return
  */
 
@@ -13,9 +13,9 @@ void free_list(list_t *head)
 
 	while (head)
 	{
-		head = temp;
 		temp = head->next;
 		free(head->str);
 		free(head);
+		head = temp;
 	}
 }
