@@ -3,18 +3,15 @@
 #include <stdlib.h>
 
 /**
- * print_listint - print the integer data
- * list of listint_t
- *
- *
- * @h: the first pointer of the link
+ * print_listint - print the integer list of listint_t
+ * @h: the head pointer of the link
  *
  * Return: the number of nodes
  */
 size_t print_listint(const listint_t *h)
 {
-	const listint_t *ptr;
 	size_t n;
+	const listint_t *ptr;
 
 	ptr = h;
 	n = 0;
@@ -26,4 +23,4 @@ size_t print_listint(const listint_t *h)
 	}
 
 	return (n);
-} listint_t;
+}
