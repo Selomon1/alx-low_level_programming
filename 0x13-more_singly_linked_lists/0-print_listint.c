@@ -14,7 +14,7 @@
 size_t print_listint(const listint_t *h)
 {
 	const listint_t *ptr;
-	unsigned int n;
+	size_t n;
 
 	ptr = h;
 	n = 0;
@@ -26,4 +26,4 @@ size_t print_listint(const listint_t *h)
 	}
 
 	return (n);
-}
+} listint_t;
