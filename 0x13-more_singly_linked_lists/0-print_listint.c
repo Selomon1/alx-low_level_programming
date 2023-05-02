@@ -6,7 +6,9 @@
  * print_listint - print the integer data
  * list of listint_t
  *
+ *
  * @h: the first pointer of the link
+ *
  * Return: the number of nodes
  */
 size_t print_listint(const listint_t *h)
