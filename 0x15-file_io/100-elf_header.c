@@ -3,12 +3,27 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <unistd.h>
-#include <stdio.h>
+#include <stidio.h>
 #include <stdlib.h>
 
 void check_elf(unsigned char *e_ident);
 void display_elf_file(Elf64_Ehdr *header);
 void close_file(int elf_file);
+
+/**
+ * read_elf_header - reads the elf header used
+ * @header: pointer to the elf file type
+ *
+ * Return
+ */
+void read_elf_header(int head_file, Elf64_Ehdr *header)
+{
+	if (read(head_file, header, sizeof(Elf64_Ehdr)) != sizeof(Elf64_Ehdr))
+	{
+		perror("read");
+		exit(98);
+	}
+}
 
 /**
  * check_elf - Checks an ELF file.
@@ -78,7 +93,7 @@ void close_file(int elf_file)
 	if (close(elf_file) == -1)
 	{
 		dprintf(STDERR_FILENO,
-			"Error: Can't close fd %d\n", elf_file);
+			"Error: Can't close head_file %d\n", elf_file);
 		exit(98);
 	}
 }
