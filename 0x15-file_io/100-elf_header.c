@@ -13,8 +13,9 @@ void close_file(int elf_file);
 /**
  * read_elf_header - reads the elf header used
  * @header: pointer to the elf file type
+ * @head_file: the integer
  *
- * Return
+ * Return: Nothing
  */
 void read_elf_header(int head_file, Elf64_Ehdr *header)
 {
@@ -59,7 +60,6 @@ void check_elf(unsigned char *e_ident)
 void display_elf_file(Elf64_Ehdr *header)
 {
 	printf("Magic:   ");
-
 	for (int i = 0; i < EI_NIDENT; i++)
 	{
 		printf("%02x", header->e_ident[i]);
