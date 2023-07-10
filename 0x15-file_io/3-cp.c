@@ -66,7 +66,7 @@ void close_file(int fdv)
 {
 	if (close(fdv) == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't close %i\n", fdv);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", fdv);
 		exit(100);
 	}
 }
