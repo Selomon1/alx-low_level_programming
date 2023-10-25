@@ -6,7 +6,7 @@ Finds perimeter of island
 
 def island_perimeter(grid):
     """ Funtion that finds perimeter of island """
-    preimeter = 0
+    perimeter = 0
     for i, height in enumerate(grid):
         for j, width in enumerate(height):
             if width == 1:
