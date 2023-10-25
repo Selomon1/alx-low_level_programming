@@ -8,7 +8,7 @@ all: m.h $(OBJ)
 	$(CC) $(SRC) -o $(OBJ)
 
 clean:
-	$(RM) $(NAME)
+	$(RM) *~ $(NAME)
 
 oclean:
 	$(RM) $(OBJ)
